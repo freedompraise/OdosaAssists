@@ -11988,9 +11988,9 @@ textarea.form-control {
   background-repeat: no-repeat;
   background-position: center center;
 }
-
 .testimony-section {
   position: relative;
+  background: #f8f9fa;
 }
 .testimony-section .overlay {
   position: absolute;
@@ -12016,15 +12016,9 @@ textarea.form-control {
 .testimony-section .owl-nav .owl-prev,
 .testimony-section .owl-nav .owl-next {
   position: absolute;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   margin-top: -10px;
   outline: none !important;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
   opacity: 0;
 }
@@ -12032,10 +12026,6 @@ textarea.form-control {
 .testimony-section .owl-nav .owl-next span:before {
   font-size: 30px;
   color: rgba(0, 0, 0, 0.5);
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .testimony-section .owl-nav .owl-prev:hover span:before,
@@ -12056,14 +12046,6 @@ textarea.form-control {
 .testimony-section:hover .owl-nav .owl-next {
   opacity: 1;
 }
-.testimony-section:hover .owl-nav .owl-prev {
-  left: 50%;
-  margin-left: -80px;
-}
-.testimony-section:hover .owl-nav .owl-next {
-  right: 50%;
-  margin-right: -80px;
-}
 .testimony-section .owl-dots {
   text-align: center;
 }
@@ -12082,18 +12064,16 @@ textarea.form-control {
   display: block;
   position: relative;
   background: white;
-  padding: 0 20px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0px 30px 33px -41px rgba(0, 0, 0, 0.24);
-  -moz-box-shadow: 0px 30px 33px -41px rgba(0, 0, 0, 0.24);
+  padding: 20px;
+  border-radius: 10px;
   box-shadow: 0px 30px 33px -41px rgba(0, 0, 0, 0.24);
 }
 .testimony-wrap .icon {
   position: absolute;
   top: -20px;
   left: 20px;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: #21bf73;
 }
@@ -12101,12 +12081,9 @@ textarea.form-control {
   color: #fff;
 }
 .testimony-wrap .user-img {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   position: relative;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
   border-radius: 50%;
 }
 .testimony-wrap .name {
@@ -12118,6 +12095,19 @@ textarea.form-control {
 .testimony-wrap .position {
   font-size: 16px;
   color: #4d4d4d;
+}
+.testimony-wrap .text {
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .testimony-wrap .user-img {
+    width: 80px;
+    height: 80px;
+  }
+  .testimony-wrap .icon {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media (max-width: 767.98px) {
