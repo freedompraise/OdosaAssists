@@ -10456,3 +10456,15 @@ textarea.form-control {
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round;
 }
+
+.certification-item {
+  margin-bottom: 20px;
+}
+.certification-item a {
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.certification-item a:hover {
+  background-color: #21bf73;
+  color: white;
+}
