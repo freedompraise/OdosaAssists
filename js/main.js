@@ -266,4 +266,10 @@
       return (percentage / 100) * 360;
     }
   });
+
+  function openFile(title, url) {
+    document.getElementById("projectModalLabel").innerText = title;
+    document.getElementById("projectFrame").src = url;
+    $("#projectModal").modal("show");
+  }
 })(jQuery);
