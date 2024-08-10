@@ -1745,3 +1745,51 @@ h5,
   margin-top: 5px;
   text-transform: none;
 }
+.pricing-entry {
+  padding: 30px;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.pricing-entry:hover {
+  transform: translateY(-10px);
+}
+
+.pricing-entry .price {
+  font-size: 3rem;
+  color: #21bf73;
+}
+
+.pricing-entry .period {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.pricing-entry ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.pricing-entry ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.pricing-entry a.btn {
+  margin-top: 20px;
+}
+
+.row.justify-content-center {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (min-width: 992px) {
+  .pricing-entry {
+    margin-bottom: 0;
+  }
+}
