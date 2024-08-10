@@ -1126,36 +1126,14 @@ h5,
   animation: pulse 2s infinite;
 }
 
-.hero-wrap .row {
-  display: flex;
-  align-items: center;
-}
-
-.hero-wrap .row .col-lg-5,
-.hero-wrap .row .col-lg-6 {
-  flex: 1;
-  min-height: 200px;
-}
-
-@media (max-width: 767px) {
-  .hero-wrap .row {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-wrap .row .col-lg-5 img {
-    max-height: 150px;
-    object-fit: cover;
-    margin-bottom: 20px;
-  }
-
-  .hero-wrap .row .col-lg-6 h1 {
-    font-size: 1.75rem;
-  }
-
-  .hero-wrap .row .col-lg-6 p {
-    font-size: 1rem;
-  }
+.hero-wrap {
+  width: 100%;
+  height: 850px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 1;
 }
 
 #slide-captions .item {
@@ -1174,25 +1152,6 @@ h5,
 #slide-captions .progress {
   width: 80px;
   height: 80px;
-}
-
-.owl-carousel .owl-nav {
-  display: none;
-}
-
-.owl-carousel .owl-dots {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  #slide-captions .progress {
-    width: 60px;
-    height: 60px;
-  }
-
-  #slide-captions .item h2 {
-    font-size: 0.9rem;
-  }
 }
 
 .slider-text {
@@ -1215,33 +1174,6 @@ h5,
 
 .owl-carousel {
   position: relative;
-}
-.owl-carousel .item {
-  padding: 15px;
-  text-align: center;
-}
-
-.owl-carousel .item h2 {
-  margin-top: 15px;
-}
-
-.owl-carousel .item .fa {
-  margin-bottom: 15px;
-}
-
-.owl-theme .owl-nav [class*="owl-"] {
-  color: #000;
-  font-size: 30px;
-  margin: 5px;
-}
-
-.owl-theme .owl-dots .owl-dot {
-  background-color: #000;
-  width: 12px;
-  height: 12px;
-  display: inline-block;
-  border-radius: 50%;
-  margin: 5px;
 }
 
 .btn {
