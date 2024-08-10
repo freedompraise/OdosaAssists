@@ -267,9 +267,17 @@
     }
   });
 
-  function openFile(title, url) {
-    document.getElementById("projectModalLabel").innerText = title;
-    document.getElementById("projectFrame").src = url;
-    $("#projectModal").modal("show");
-  }
+  $(document).ready(function () {
+    $("#slide-captions").owlCarousel({
+      items: 1, // Number of items to display at a time
+      loop: true, // Enable looping
+      autoplay: true, // Enable autoplay
+      autoplayTimeout: 3000, // Time between slides (in milliseconds)
+      autoplayHoverPause: true, // Pause on hover
+      nav: true, // Show navigation arrows
+      dots: true, // Show pagination dots
+      animateOut: "slideOutDown", // Custom animation on slide out
+      animateIn: "flipInX", // Custom animation on slide in
+    });
+  });
 })(jQuery);
