@@ -1152,6 +1152,8 @@ h5,
 #slide-captions .progress {
   width: 80px;
   height: 80px;
+  margin: 0 auto;
+  color: #21bf73;
 }
 
 .slider-text {
@@ -1710,42 +1712,36 @@ h5,
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round;
 }
-
 .certification-item {
   margin-bottom: 20px;
 }
-.certification-item a {
+
+.certification-link {
+  display: block;
+  padding: 20px;
+  background: #fff;
+  border: 2px solid #21bf73;
+  border-radius: 10px;
+  text-align: center;
   font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  text-decoration: none;
   transition: all 0.3s ease;
-}
-.certification-item a:hover {
-  background-color: #21bf73;
-  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio-item {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 30px;
-}
-.portfolio-item img {
-  width: 100%;
-  height: auto;
-}
-.portfolio-item .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+.certification-link:hover {
+  background-color: #21bf73;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
-.portfolio-item:hover .overlay {
-  opacity: 1;
+
+.certification-link::after {
+  content: "Certified";
+  display: block;
+  font-size: 12px;
+  color: #777;
+  margin-top: 5px;
+  text-transform: none;
 }
