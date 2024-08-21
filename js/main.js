@@ -28,20 +28,25 @@
   };
   loader();
 
-  var carousel = function () {
+  var baseCarouselSettings = {
+    center: true,
+    loop: true,
+    autoplay: true,
+    stagePadding: 0,
+    nav: false,
+    navText: [
+      '<span class="ion-ios-arrow-back">',
+      '<span class="ion-ios-arrow-forward">',
+    ],
+  };
+
+  // Testimony Carousel
+  var carouselTestimony = function () {
     $(".carousel-testimony").owlCarousel({
-      center: true,
-      loop: true,
-      autoplay: true,
-      autoplaySpeed: 2000,
+      ...baseCarouselSettings,
       items: 1,
       margin: 30,
-      stagePadding: 0,
-      nav: false,
-      navText: [
-        '<span class="ion-ios-arrow-back">',
-        '<span class="ion-ios-arrow-forward">',
-      ],
+      autoplaySpeed: 2000,
       responsive: {
         0: {
           items: 1,
@@ -55,7 +60,30 @@
       },
     });
   };
-  carousel();
+
+  // Tools Carousel
+  var carouselTools = function () {
+    $(".carousel-tools").owlCarousel({
+      ...baseCarouselSettings,
+      items: 3,
+      margin: 10,
+      autoplaySpeed: 1000,
+      responsive: {
+        0: {
+          items: 2,
+        },
+        680: {
+          items: 3,
+        },
+        1000: {
+          items: 5,
+        },
+      },
+    });
+  };
+
+  carouselTestimony();
+  carouselTools();
 
   $("nav .dropdown").hover(
     function () {
