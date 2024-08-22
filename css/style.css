@@ -1030,6 +1030,23 @@ h5,
   font-weight: 400;
 }
 
+h1.typewriter {
+  font-family: "Playfair Display", serif;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+  animation: typing 3.5s steps(30) infinite alternate,
+    blink 0.75s step-end infinite;
+}
+
+.compressed-text {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
 .container {
   max-width: 1250px;
 }
@@ -1128,12 +1145,41 @@ h5,
 
 .hero-wrap {
   width: 100%;
-  height: 850px;
-  position: relative;
+  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
+  position: relative;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.text-container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #fff;
 }
 
 #slide-captions .item {
@@ -1157,21 +1203,32 @@ h5,
 }
 
 .slider-text {
-  height: 850px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
 }
-.slider-text h1 {
-  font-size: 60px;
-  color: #000000;
-  line-height: 1.1;
-  font-weight: 500;
+
+/* Keyframes for typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
-.slider-text h1 span {
-  display: block;
-}
-.slider-text p {
-  font-size: 18px;
-  line-height: 1.5;
-  color: rgba(0, 0, 0, 0.8);
+
+/* Cursor blinking */
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
 }
 
 .owl-carousel {
@@ -1390,6 +1447,34 @@ h5,
 @media (max-width: 767.98px) {
   .ftco-section {
     padding: 3em 0;
+  }
+}
+
+.animated-text {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid white;
+  animation: typing 3.5s steps(30) infinite alternate,
+    blink-cursor 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+}
+
+@keyframes blink-cursor {
+  50% {
+    border-color: transparent;
   }
 }
 
@@ -1819,4 +1904,25 @@ h5,
   60% {
     transform: translateY(-5px);
   }
+}
+
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.description-text {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 20px 0;
+  color: white;
+  text-align: center;
+  max-width: 700px;
+  line-height: 1.6;
 }

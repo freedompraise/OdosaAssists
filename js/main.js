@@ -308,4 +308,18 @@
       animateIn: "flipInX", // Custom animation on slide in
     });
   });
+
+  $(document).ready(function () {
+    var $typewriterText = $(".typewriter");
+    var originalText = $typewriterText.html();
+
+    function resetTyping() {
+      $typewriterText.html("");
+      setTimeout(function () {
+        $typewriterText.html(originalText);
+      }, 1000);
+    }
+
+    setInterval(resetTyping, 4000);
+  });
 })(jQuery);
