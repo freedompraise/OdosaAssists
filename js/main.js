@@ -82,8 +82,28 @@
     });
   };
 
+  var carouselService = function () {
+    $(".carousel-services").owlCarousel({
+      ...baseCarouselSettings,
+      items: 3,
+      margin: 10,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        768: {
+          items: 2,
+        },
+        1024: {
+          items: 3,
+        },
+      },
+    });
+  };
+
   carouselTestimony();
   carouselTools();
+  carouselService();
 
   $("nav .dropdown").hover(
     function () {
