@@ -1309,77 +1309,62 @@ h5,
 .services:hover .media-body h3 {
   color: #fff;
 }
-
-.progress-circle .progress {
-  width: 150px;
-  height: 150px;
-  background: none;
+.progress-circle {
+  width: 100px;
+  height: 100px;
   position: relative;
 }
 
-.progress-circle .progress::after {
-  content: "";
+.progress-circle .progress-left,
+.progress-circle .progress-right {
+  position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  border: 6px solid #eee;
-  position: absolute;
-  top: 0;
-  left: 0;
+  clip: rect(
+    0,
+    100px,
+    100px,
+    50px
+  ); /* Adjusted to properly handle the circular division */
 }
 
-.progress-circle .progress > span {
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  z-index: 1;
-}
-
-.progress-circle .progress .progress-left {
-  left: 0;
-}
-
-.progress-circle .progress .progress-bar {
+.progress-circle .progress-bar {
   width: 100%;
   height: 100%;
-  background: none;
-  border-width: 6px;
+  border-width: 10px;
   border-style: solid;
-  position: absolute;
-  top: 0;
-  border-color: #21bf73 !important;
-}
-
-.progress-circle .progress .progress-left .progress-bar {
-  left: 100%;
-  border-top-right-radius: 80px;
-  border-bottom-right-radius: 80px;
-  border-left: 0;
-  -webkit-transform-origin: center left;
-  -ms-transform-origin: center left;
-  transform-origin: center left;
-}
-
-.progress-circle .progress .progress-right {
-  right: 0;
-}
-
-.progress-circle .progress .progress-right .progress-bar {
-  left: -100%;
-  border-top-left-radius: 80px;
-  border-bottom-left-radius: 80px;
-  border-right: 0;
-  -webkit-transform-origin: center right;
-  -ms-transform-origin: center right;
-  transform-origin: center right;
-}
-
-.progress-circle .progress .progress-value {
+  border-color: transparent;
+  border-radius: 50%; /* Ensures circular shape */
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.progress-circle[data-value="100"] .progress-left .progress-bar {
+  border-color: #21bf73;
+  transform: rotate(180deg); /* Left side should rotate half circle */
+}
+
+.progress-circle[data-value="100"] .progress-right .progress-bar {
+  border-color: #21bf73;
+  animation: right-rotate 1.5s linear forwards;
+}
+
+@keyframes right-rotate {
+  100% {
+    transform: rotate(180deg); /* Right side rotates to complete the circle */
+  }
+}
+
+.progress-value {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ftco-animate {
