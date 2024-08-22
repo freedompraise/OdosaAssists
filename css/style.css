@@ -1793,3 +1793,30 @@ h5,
     margin-bottom: 0;
   }
 }
+
+.interactive-link {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: bounce 1s infinite;
+}
+
+.interactive-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
