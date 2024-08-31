@@ -1627,6 +1627,12 @@ h4 {
   }
 }
 
+@media (max-width: 767.98px) {
+  .heading-section h1 {
+    text-align: center;
+  }
+}
+
 .heading-section.heading-section-white .subheading {
   color: rgba(255, 255, 255, 0.9);
 }
