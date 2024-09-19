@@ -149,117 +149,132 @@
         <p class="text-center">Fill out the form below to provide more details, and I will get back to you in a few
             hours.</p>
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-10">
                 <form action="https://formspree.io/f/mblrvlqe" method="POST">
-                    <!-- Full Name -->
-                    <div class="form-group mb-3">
-                        <label for="name">Full Name</label>
-                        <input type="text" class="form-control" id="name" name="name" required
-                            placeholder="Your Full Name">
+                    <div class="row">
+                        <!-- Full Name and Email in one row -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="name">Full Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required
+                                    placeholder="Your Full Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" required
+                                    placeholder="Your Email Address">
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Email Address -->
-                    <div class="form-group mb-3">
-                        <label for="email">Email Address</label>
-                        <input type="email" class="form-control" id="email" name="email" required
-                            placeholder="Your Email Address">
+                    <div class="row">
+                        <!-- WhatsApp and Service Type in one row -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="whatsapp">WhatsApp Number (Optional)</label>
+                                <input type="tel" class="form-control" id="whatsapp" name="whatsapp"
+                                    placeholder="Your WhatsApp Number">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="service">What service are you looking for?</label>
+                                <select class="form-control" id="service" name="service" required>
+                                    <option value="" disabled selected>Select a Service</option>
+                                    <option value="admin_management">Admin Management</option>
+                                    <option value="customer_service">Customer Service</option>
+                                    <option value="project_management">Project Management</option>
+                                    <option value="data_entry">Data Entry</option>
+                                    <option value="executive_support">Executive Support</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Optional WhatsApp Number -->
-                    <div class="form-group mb-3">
-                        <label for="whatsapp">WhatsApp Number (Optional)</label>
-                        <input type="tel" class="form-control" id="whatsapp" name="whatsapp"
-                            placeholder="Your WhatsApp Number">
+                    <div class="row">
+                        <!-- Duration and Hours in one row -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="duration">How long do you need the service for?</label>
+                                <select class="form-control" id="duration" name="duration" required>
+                                    <option value="" disabled selected>Select Duration</option>
+                                    <option value="one_time">One-time task</option>
+                                    <option value="short_term">Short-term (Less than a month)</option>
+                                    <option value="long_term">Long-term (1-6 months)</option>
+                                    <option value="ongoing">Ongoing support</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="hours">Preferred working hours (if any)</label>
+                                <select class="form-control" id="hours" name="hours">
+                                    <option value="" disabled selected>Select Hours</option>
+                                    <option value="part_time">Part-time (less than 20 hours/week)</option>
+                                    <option value="full_time">Full-time (20-40 hours/week)</option>
+                                    <option value="as_needed">As needed</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Type of Services Needed -->
-                    <div class="form-group mb-3">
-                        <label for="service">What service are you looking for?</label>
-                        <select class="form-control" id="service" name="service" required>
-                            <option value="" disabled selected>Select a Service</option>
-                            <option value="admin_management">Admin Management</option>
-                            <option value="customer_service">Customer Service</option>
-                            <option value="project_management">Project Management</option>
-                            <option value="data_entry">Data Entry</option>
-                            <option value="executive_support">Executive Support</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-
-                    <!-- Duration of Service -->
-                    <div class="form-group mb-3">
-                        <label for="duration">How long do you need the service for?</label>
-                        <select class="form-control" id="duration" name="duration" required>
-                            <option value="" disabled selected>Select Duration</option>
-                            <option value="one_time">One-time task</option>
-                            <option value="short_term">Short-term (Less than a month)</option>
-                            <option value="long_term">Long-term (1-6 months)</option>
-                            <option value="ongoing">Ongoing support</option>
-                        </select>
-                    </div>
-
-                    <!-- Preferred Working Hours -->
-                    <div class="form-group mb-3">
-                        <label for="hours">Preferred working hours (if any)</label>
-                        <select class="form-control" id="hours" name="hours">
-                            <option value="" disabled selected>Select Hours</option>
-                            <option value="part_time">Part-time (less than 20 hours/week)</option>
-                            <option value="full_time">Full-time (20-40 hours/week)</option>
-                            <option value="as_needed">As needed</option>
-                        </select>
-                    </div>
-
-                    <!-- Areas of Focus -->
+                    <!-- Areas of Focus - Full Width -->
                     <div class="form-group mb-3">
                         <label>What areas do you need assistance with? (Select all that apply)</label><br>
-                        <div class="form-check">
+                        <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" id="focus1" name="focus[]"
                                 value="email_management">
                             <label class="form-check-label" for="focus1">Email Management</label>
                         </div>
-                        <div class="form-check">
+                        <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" id="focus2" name="focus[]"
                                 value="calendar_management">
                             <label class="form-check-label" for="focus2">Calendar Management</label>
                         </div>
-                        <div class="form-check">
+                        <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" id="focus3" name="focus[]"
                                 value="lead_generation">
                             <label class="form-check-label" for="focus3">Lead Generation</label>
                         </div>
-                        <div class="form-check">
+                        <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" id="focus4" name="focus[]"
                                 value="data_entry">
                             <label class="form-check-label" for="focus4">Data Entry</label>
                         </div>
-                        <div class="form-check">
+                        <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" id="focus5" name="focus[]"
                                 value="social_media">
                             <label class="form-check-label" for="focus5">Social Media Management</label>
                         </div>
                     </div>
 
-                    <!-- Budget -->
-                    <div class="form-group mb-3">
-                        <label for="budget">What is your budget for this service?</label>
-                        <input type="text" class="form-control" id="budget" name="budget" required
-                            placeholder="Enter your budget (e.g., $500)">
+                    <!-- Budget and Additional Information in one row -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="budget">What is your budget for this service?</label>
+                                <input type="text" class="form-control" id="budget" name="budget" required
+                                    placeholder="Enter your budget (e.g., $500)">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="message">Additional Information</label>
+                                <textarea class="form-control" id="message" name="message" rows="3"
+                                    placeholder="Provide any other relevant details..."></textarea>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Additional Information -->
-                    <div class="form-group mb-3">
-                        <label for="message">Additional Information</label>
-                        <textarea class="form-control" id="message" name="message" rows="5" required
-                            placeholder="Provide any other relevant details..."></textarea>
-                    </div>
-
-                    <!-- Submit Button -->
+                    <!-- Submit Button - Full Width -->
                     <button type="submit" class="btn btn-primary w-100">Send Message</button>
                 </form>
             </div>
         </div>
     </section>
-
 
     <!-- Footer -->
     <footer class="ftco-footer" id="contacts">

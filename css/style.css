@@ -1902,6 +1902,10 @@ h4 {
   z-index: 2;
 }
 
+label {
+  font-weight: 600 !important;
+}
+
 .description-text {
   font-family: "Lato", sans-serif;
   font-weight: bold;
