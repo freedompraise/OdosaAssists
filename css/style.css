@@ -1497,23 +1497,28 @@ h4 {
   padding: 0;
 }
 
-.ftco-footer .ftco-footer-social li {
+.ftco-footer li {
   display: inline-block;
   margin-right: 10px;
 }
 
-.ftco-footer .ftco-footer-social li a {
+.ftco-footer a {
   color: #000;
   font-size: 24px;
   transition: all 0.3s ease;
 }
 
-.ftco-footer .ftco-footer-social li a:hover {
+.ftco-footer a:hover {
   color: #21bf73;
 }
 
 .ftco-footer .text-center {
   text-align: center;
+}
+
+.ftco-footer ul {
+  padding: 0;
+  list-style: none;
 }
 
 @-webkit-keyframes wheel-up-down {
@@ -1975,4 +1980,24 @@ label {
   .col-md-6 {
     max-width: 100%;
   }
+}
+
+.card {
+  border: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #21bf73;
+}
+
+.card-body p {
+  font-size: 1rem;
 }
