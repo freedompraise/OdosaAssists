@@ -328,37 +328,4 @@
       animateIn: "flipInX", // Custom animation on slide in
     });
   });
-
-  $(document).ready(function () {
-    var $typewriterText = $(".typewriter");
-    var originalText = $typewriterText.html();
-    var typingSpeed = 200; // Typing speed (milliseconds per character)
-
-    function startTyping() {
-      var i = 0;
-      $typewriterText.html(""); // Clear text initially
-
-      function typeCharacter() {
-        if (i < originalText.length) {
-          $typewriterText.append(originalText.charAt(i)); // Add one character at a time
-          i++;
-          setTimeout(typeCharacter, typingSpeed); // Call the function recursively for the next character
-        }
-      }
-
-      typeCharacter(); // Start typing
-    }
-
-    startTyping(); // Initial typing
-
-    // Set up interval to reset typing
-    setInterval(function () {
-      var currentText = $typewriterText.html();
-      var lastChar = currentText.charAt(currentText.length - 1); // Get the last character
-      if (lastChar !== ".") {
-        return;
-      }
-      startTyping();
-    }, 20000);
-  });
 })(jQuery);

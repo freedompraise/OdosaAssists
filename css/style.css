@@ -1030,16 +1030,6 @@ h5,
   font-weight: 400;
 }
 
-h1.typewriter {
-  font-family: "Playfair Display", serif;
-  color: white;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid white;
-  animation: typing 3.5s steps(30) infinite alternate,
-    blink 0.75s step-end infinite;
-}
-
 .compressed-text {
   color: white;
   font-family: "Lato", sans-serif;
